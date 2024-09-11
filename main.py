@@ -12,11 +12,11 @@ def view_menu():
     print(Coffee.display_menu())
 
 def place_order():
-    # Get customer name
+    # Provide customer name
     name = input("Please enter your name: ")
     customer = Customer(name)
     
-    # Display coffee menu
+    # Showcase coffee menu
     view_menu()
     
     while True:
