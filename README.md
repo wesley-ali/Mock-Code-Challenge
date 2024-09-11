@@ -1,7 +1,9 @@
 #Mock Code Challenge - Coffee Shop (Object Relationships).
+
 For this assignment, we'll be working with a Coffee shop-style domain.
 
 #Authors
+
 aliwesley86@gmail.com
 
 We have three models: Coffee, Customer, and Order.
@@ -41,6 +43,7 @@ Before you submit! Save and run your code to verify that it works as you expect.
 Write the following methods in the classes in the files provided. Feel free to build out any helper methods if needed.
 
  i.Initializers and Properties
+ 
 Customer
 Customer __init__(self, name)
 Customer is initialized with a name
@@ -49,6 +52,7 @@ Returns customer's name
 Names must be of type str
 Names must be between 1 and 15 characters, inclusive
 Should be able to change after the customer is instantiated
+
 Coffee
 Coffee __init__(self, name)
 Coffee is initialized with a name
@@ -58,6 +62,7 @@ Names must be of type str
 Names length must be greater or equal to 3 characters
 Should not be able to change after the coffee is instantiated
 hint: hasattr()
+
 Order
 Order __init__(self, customer, coffee, price)
 Order is initialized with a Customer instance, a Coffee instance, and a price
@@ -67,7 +72,9 @@ Prices must be of type float
 Price must be a number between 1.0 and 10.0, inclusive
 Should not be able to change after the order is instantiated
 hint: hasattr()
+
  ii.Object Relationship Methods and Properties
+ 
 Order
 Order property customer
 Returns the customer object for that order
@@ -75,6 +82,7 @@ Must be of type Customer
 Order property coffee
 Returns the coffee object for that order
 Must be of type Coffee
+
 Coffee
 Coffee orders()
 Returns a list of all orders for that coffee
@@ -82,6 +90,7 @@ Orders must be of type Order
 Coffee customers()
 Returns a unique list of all customers who have ordered a particular coffee.
 Customers must be of type Customer
+
 Customer
 Customer orders()
 Returns a list of all orders for that customer
@@ -89,7 +98,10 @@ Orders must be of type Order
 Customer coffees()
 Returns a unique list of all coffees a customer has ordered
 Coffees must be of type Coffee
-Aggregate and Association Methods
+
+
+iii. Aggregate and Association Methods
+
 Customer
 Customer create_order(coffee, price)
 Receives a coffee object and a price number as arguments
@@ -102,12 +114,15 @@ Coffee average_price()
 Returns the average price for a coffee based on its orders
 Returns 0 if the coffee has never been ordered
 Reminder: you can calculate the average by adding up all the orders prices and dividing by the number of orders
- iii. Bonus: Aggregate and Association Method
+
+ iv. Bonus: Aggregate and Association Method
+ 
 Customer classmethod most_aficionado(coffee)
 Receives a coffee object argument
 Returns the Customer instance that has spent the most money on the coffee instance provided as argument.
 Returns None if there are no customers for the coffee instance provided.
 hint: will need a way to remember all Customer objects
+
 #License
 
 MIT
